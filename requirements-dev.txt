@@ -1,0 +1,2 @@
+# Runtime uses only the Python standard library (3.10+, tested on 3.13). Tests:
+pytest>=8

@@ -1,0 +1,367 @@
+{
+ "dataset": {
+  "profile": "starter",
+  "seed": 20261022,
+  "generator_version": "1.0.0",
+  "command": "python -m inventryx generate --profile starter --seed 20261022",
+  "scale": {
+   "name": "starter",
+   "warehouses": 2,
+   "locations": 1000,
+   "skus": 500,
+   "order_lines": 10000,
+   "suppliers": 20,
+   "capacity_cases": 8,
+   "incompatible_cases": 4,
+   "storage_cases": 4,
+   "duplicate_cases": 6,
+   "valid_controls": 10,
+   "blocked_aisle_cases": 4,
+   "blocked_aisle_controls": 2,
+   "labor_cases": 4,
+   "labor_controls": 2,
+   "baseline_blocks_per_wh": 8
+  },
+  "calendar": {
+   "history": [
+    "2026-07-01",
+    "2026-10-28"
+   ],
+   "peak_start": "2026-10-01",
+   "cutover": "2026-10-15",
+   "holdout": [
+    "2026-10-15",
+    "2026-10-28"
+   ],
+   "as_of": "2026-10-30 00:00:00"
+  },
+  "provenance": "100% synthetic; no external datasets used. See docs/provenance.md."
+ },
+ "row_counts": {
+  "storage_class": 5,
+  "warehouse": 2,
+  "zone": 12,
+  "zone_storage_class": 14,
+  "aisle": 19,
+  "location": 1000,
+  "supplier": 20,
+  "sku": 500,
+  "warehouse_sku": 634,
+  "compatibility_rule": 9,
+  "sku_profile": 1268,
+  "slot_assignment": 1300,
+  "slot_candidate": 1902,
+  "aisle_block": 22,
+  "orders": 3683,
+  "order_line": 10000,
+  "pick_event": 9908,
+  "replenishment": 1457,
+  "labor_capacity": 240,
+  "replen_labor_daily": 240,
+  "state_event": 20274,
+  "slotting_exception": 53
+ },
+ "distribution": {
+  "top20_sku_line_share": 0.648,
+  "peak_volume_lift": 1.353,
+  "weekend_weekday_ratio": 0.623,
+  "oversized_share": 0.044,
+  "hazmat_share": 0.072,
+  "cold_chain_share": 0.182,
+  "class_d_profiles": 336,
+  "peak_up_trends": 140,
+  "down_trends": 249
+ },
+ "profiles": {
+  "velocity_class_by_version": {
+   "1": {
+    "B": 182,
+    "A": 218,
+    "D": 61,
+    "C": 173
+   },
+   "2": {
+    "C": 70,
+    "D": 275,
+    "B": 133,
+    "A": 156
+   }
+  },
+  "trend_vs_hidden_pattern": {
+   "DECLINING": {
+    "INACTIVE": 5,
+    "DOWN": 39,
+    "STABLE": 7
+   },
+   "SEASONAL_PEAK": {
+    "PEAK_UP": 53,
+    "DOWN": 10,
+    "INACTIVE": 7,
+    "STABLE": 3,
+    "NEW": 3
+   },
+   "STEADY": {
+    "STABLE": 174,
+    "DOWN": 200,
+    "PEAK_UP": 87,
+    "INACTIVE": 35,
+    "NEW": 11
+   }
+  },
+  "seasonal_sku_peak_up_recall": 0.6974,
+  "peak_up_precision": 0.3786
+ },
+ "slotting": {
+  "plans": {
+   "LEGACY_2026H2": {
+    "slots": 634,
+    "a_class_skus": 156,
+    "a_class_in_forward_pick_pct": 19.23,
+    "a_class_in_golden_zone_pct": 44.87,
+    "mean_units_capacity": 134.71
+   },
+   "OPT_PEAK_2026W42": {
+    "slots": 634,
+    "a_class_skus": 156,
+    "a_class_in_forward_pick_pct": 15.38,
+    "a_class_in_golden_zone_pct": 73.72,
+    "mean_units_capacity": 111.06
+   },
+   "moves_at_cutover": 630,
+   "location_utilisation_pct": 63.98
+  },
+  "planner_overrides": {
+   "APPROVED": 10,
+   "REJECTED": 22
+  }
+ },
+ "scenarios": {
+  "BASELINE_LEGACY": {
+   "orders": 519,
+   "lines": 1449,
+   "distance_m": 35243.6,
+   "distance_per_order_m": 67.91,
+   "distance_per_line_m": 24.323,
+   "picker_hours": 21.49,
+   "lines_per_picker_hour": 67.44,
+   "golden_zone_pick_share": 0.4796,
+   "replen_tasks": 185,
+   "emergency_replen": 50,
+   "replen_minutes": 762.02,
+   "labor_days_exceeded": 1,
+   "over_capacity_min": 4.92,
+   "distance_reduction_pct": 0.0,
+   "throughput_gain_pct": 0.0,
+   "replen_minutes_change_pct": 0.0
+  },
+  "OPT_STATIC_V1": {
+   "orders": 519,
+   "lines": 1449,
+   "distance_m": 29051.0,
+   "distance_per_order_m": 55.97,
+   "distance_per_line_m": 20.049,
+   "picker_hours": 19.44,
+   "lines_per_picker_hour": 74.55,
+   "golden_zone_pick_share": 0.6853,
+   "replen_tasks": 84,
+   "emergency_replen": 13,
+   "replen_minutes": 329.74,
+   "labor_days_exceeded": 0,
+   "over_capacity_min": 0.0,
+   "distance_reduction_pct": 17.57,
+   "throughput_gain_pct": 10.54,
+   "replen_minutes_change_pct": -56.73
+  },
+  "OPT_PEAK_V2": {
+   "orders": 519,
+   "lines": 1449,
+   "distance_m": 28160.6,
+   "distance_per_order_m": 54.26,
+   "distance_per_line_m": 19.435,
+   "picker_hours": 19.11,
+   "lines_per_picker_hour": 75.82,
+   "golden_zone_pick_share": 0.7336,
+   "replen_tasks": 83,
+   "emergency_replen": 13,
+   "replen_minutes": 325.49,
+   "labor_days_exceeded": 0,
+   "over_capacity_min": 0.0,
+   "distance_reduction_pct": 20.1,
+   "throughput_gain_pct": 12.43,
+   "replen_minutes_change_pct": -57.29
+  }
+ },
+ "operations": {
+  "orders": 3683,
+  "cancelled": 26,
+  "order_lines": 10000,
+  "picks": 9908,
+  "orders_held_for_blocked_aisle": 18,
+  "aisle_blocks": 22,
+  "replen_tasks": {
+   "EMERGENCY": 270,
+   "SCHEDULED": 1187
+  },
+  "replen_over_capacity_tasks": 19,
+  "labor_days": 240,
+  "labor_days_exceeded": 9,
+  "labor_days_exceeded_by_month": {
+   "2026-07": {
+    "INJECTED": 2
+   },
+   "2026-09": {
+    "INJECTED": 1,
+    "RULE_DERIVED": 1
+   },
+   "2026-10": {
+    "RULE_DERIVED": 4,
+    "INJECTED": 1
+   }
+  }
+ },
+ "exceptions": {
+  "by_type": {
+   "PICK_PATH_BLOCKED_AISLE": 4,
+   "REPLEN_LABOR_EXCEEDED": 9,
+   "ORDER_DEFERRED_BLOCKED_AISLE": 18,
+   "LOCATION_CAPACITY_EXCEEDED": 8,
+   "STORAGE_CLASS_MISMATCH": 4,
+   "DUPLICATE_ACTIVE_LOCATION": 6,
+   "INCOMPATIBLE_CO_LOCATION": 4
+  },
+  "by_severity": {
+   "CRITICAL": 12,
+   "WARNING": 23,
+   "INFO": 18
+  }
+ },
+ "ground_truth": {
+  "rows": 49,
+  "by_issue": {
+   "PICK_PATH_BLOCKED_AISLE": 4,
+   "NONE": 14,
+   "REPLEN_LABOR_EXCEEDED": 9,
+   "LOCATION_CAPACITY_EXCEEDED": 8,
+   "STORAGE_CLASS_MISMATCH": 4,
+   "DUPLICATE_ACTIVE_LOCATION": 6,
+   "INCOMPATIBLE_CO_LOCATION": 4
+  },
+  "by_origin": {
+   "INJECTED": 44,
+   "RULE_DERIVED": 5
+  },
+  "detection": {
+   "LOCATION_CAPACITY_EXCEEDED": {
+    "positives": 8,
+    "flagged": 8,
+    "tp": 8,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "STORAGE_CLASS_MISMATCH": {
+    "positives": 4,
+    "flagged": 4,
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "INCOMPATIBLE_CO_LOCATION": {
+    "positives": 4,
+    "flagged": 4,
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "DUPLICATE_ACTIVE_LOCATION": {
+    "positives": 6,
+    "flagged": 6,
+    "tp": 6,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "PICK_PATH_BLOCKED_AISLE": {
+    "positives": 4,
+    "flagged": 4,
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "REPLEN_LABOR_EXCEEDED": {
+    "positives": 9,
+    "flagged": 9,
+    "tp": 9,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   "NEGATIVE_CONTROLS": {
+    "controls": 14,
+    "false_alarms": 0,
+    "specificity": 1.0
+   }
+  }
+ },
+ "validation": {
+  "total": 210,
+  "passed": 210,
+  "failed": 0,
+  "by_category": {
+   "date_order": {
+    "PASS": 7
+   },
+   "distribution": {
+    "PASS": 9
+   },
+   "duplicates": {
+    "PASS": 14
+   },
+   "enum": {
+    "PASS": 22
+   },
+   "foreign_key": {
+    "PASS": 46
+   },
+   "ground_truth": {
+    "PASS": 9
+   },
+   "join": {
+    "PASS": 11
+   },
+   "leakage": {
+    "PASS": 2
+   },
+   "lifecycle": {
+    "PASS": 4
+   },
+   "physical_constraints": {
+    "PASS": 3
+   },
+   "primary_key": {
+    "PASS": 22
+   },
+   "reconciliation": {
+    "PASS": 13
+   },
+   "reproducibility": {
+    "PASS": 2
+   },
+   "schema": {
+    "PASS": 45
+   },
+   "sql": {
+    "PASS": 1
+   }
+  }
+ }
+}

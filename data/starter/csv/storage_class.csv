@@ -1,0 +1,6 @@
+storage_class_code,description,temp_min_c,temp_max_c
+AMBIENT,"Ambient, standard handling",10.0,30.0
+CHILLED,Chilled 2-8 C,2.0,8.0
+FROZEN,Frozen -25 to -18 C,-25.0,-18.0
+HAZMAT,"Dangerous goods cabinet, ambient",10.0,25.0
+OVERSIZE,Oversized / pallet-handled ambient,10.0,30.0

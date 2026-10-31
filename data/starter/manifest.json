@@ -1,0 +1,424 @@
+{
+ "profile": "starter",
+ "seed": 20261022,
+ "generator_version": "1.0.0",
+ "command": "python -m inventryx generate --profile starter --seed 20261022",
+ "scale": {
+  "name": "starter",
+  "warehouses": 2,
+  "locations": 1000,
+  "skus": 500,
+  "order_lines": 10000,
+  "suppliers": 20,
+  "capacity_cases": 8,
+  "incompatible_cases": 4,
+  "storage_cases": 4,
+  "duplicate_cases": 6,
+  "valid_controls": 10,
+  "blocked_aisle_cases": 4,
+  "blocked_aisle_controls": 2,
+  "labor_cases": 4,
+  "labor_controls": 2,
+  "baseline_blocks_per_wh": 8
+ },
+ "calendar": {
+  "history": [
+   "2026-07-01",
+   "2026-10-28"
+  ],
+  "peak_start": "2026-10-01",
+  "cutover": "2026-10-15",
+  "holdout": [
+   "2026-10-15",
+   "2026-10-28"
+  ],
+  "as_of": "2026-10-30 00:00:00"
+ },
+ "provenance": "100% synthetic; no external datasets used. See docs/provenance.md.",
+ "validation": {
+  "passed": 210,
+  "failed": 0
+ },
+ "tables": {
+  "storage_class": {
+   "kind": "reference",
+   "rows": 5
+  },
+  "warehouse": {
+   "kind": "master",
+   "rows": 2
+  },
+  "zone": {
+   "kind": "master",
+   "rows": 12
+  },
+  "zone_storage_class": {
+   "kind": "bridge",
+   "rows": 14
+  },
+  "aisle": {
+   "kind": "master",
+   "rows": 19
+  },
+  "location": {
+   "kind": "master",
+   "rows": 1000
+  },
+  "supplier": {
+   "kind": "master",
+   "rows": 20
+  },
+  "sku": {
+   "kind": "master",
+   "rows": 500
+  },
+  "warehouse_sku": {
+   "kind": "bridge",
+   "rows": 634
+  },
+  "compatibility_rule": {
+   "kind": "reference",
+   "rows": 9
+  },
+  "sku_profile": {
+   "kind": "derived",
+   "rows": 1268
+  },
+  "slot_assignment": {
+   "kind": "transaction",
+   "rows": 1300
+  },
+  "slot_candidate": {
+   "kind": "derived",
+   "rows": 1902
+  },
+  "aisle_block": {
+   "kind": "event",
+   "rows": 22
+  },
+  "orders": {
+   "kind": "transaction",
+   "rows": 3683
+  },
+  "order_line": {
+   "kind": "transaction",
+   "rows": 10000
+  },
+  "pick_event": {
+   "kind": "event",
+   "rows": 9908
+  },
+  "replenishment": {
+   "kind": "event",
+   "rows": 1457
+  },
+  "labor_capacity": {
+   "kind": "master",
+   "rows": 240
+  },
+  "replen_labor_daily": {
+   "kind": "derived",
+   "rows": 240
+  },
+  "state_event": {
+   "kind": "event",
+   "rows": 20274
+  },
+  "slotting_exception": {
+   "kind": "derived",
+   "rows": 53
+  }
+ },
+ "files": [
+  {
+   "path": "csv/aisle.csv",
+   "bytes": 1078,
+   "sha256": "2d5c6b0cdda4698e09dc8e100706da72288c353425f23749a309b8a6bd464d1c"
+  },
+  {
+   "path": "csv/aisle_block.csv",
+   "bytes": 2388,
+   "sha256": "7d5af4e10f1876877b345a99598f10e14701ba9a27d77d26d454c7cc2aa8c974"
+  },
+  {
+   "path": "csv/compatibility_rule.csv",
+   "bytes": 805,
+   "sha256": "199be591f0e14a6610813554327312462ff2f818184f3b92899318a0efdd0539"
+  },
+  {
+   "path": "csv/labor_capacity.csv",
+   "bytes": 13985,
+   "sha256": "87daf84305fe5c3c2b6b6d585e4ac9fc3593d4ef3dc299ed1defde77aed140f6"
+  },
+  {
+   "path": "csv/location.csv",
+   "bytes": 150074,
+   "sha256": "0c42bcc89c1544dfad70f1c2b80d258f161e28f5b5fb4ef52086f44b8db62419"
+  },
+  {
+   "path": "csv/order_line.csv",
+   "bytes": 611291,
+   "sha256": "4e72360aa5aa87d0ac027e10fba0ae41fe63136ccc065128e32c4c1ac7dc1e83"
+  },
+  {
+   "path": "csv/orders.csv",
+   "bytes": 655303,
+   "sha256": "a46e25f44108925704187c683adc29f45913659ffdf04b0f42515e6f88ddc47e"
+  },
+  {
+   "path": "csv/pick_event.csv",
+   "bytes": 1738264,
+   "sha256": "511f24d88b4b55b647ae94bf3e5509d2a70f8e50cdc7be0e7aea4eb319f29bc3"
+  },
+  {
+   "path": "csv/replen_labor_daily.csv",
+   "bytes": 24337,
+   "sha256": "9df9d6a86ab0de9e674fda85472d28bfd0a063ba12f7e40e2f03e38391e13da5"
+  },
+  {
+   "path": "csv/replenishment.csv",
+   "bytes": 265434,
+   "sha256": "49b27a963fd5c4f12d118c9b7f83e377355c6bdacc0e55d4cdc9309223e73059"
+  },
+  {
+   "path": "csv/sku.csv",
+   "bytes": 67090,
+   "sha256": "b0da0d56fc510c312fb443c1a8873434de425e1b580def6ba403603f2e125281"
+  },
+  {
+   "path": "csv/sku_profile.csv",
+   "bytes": 201871,
+   "sha256": "9f5136c6086be6fd4236bf1ac88728743734fb03408df8660b15f61d9240311f"
+  },
+  {
+   "path": "csv/slot_assignment.csv",
+   "bytes": 222566,
+   "sha256": "cb4371efe96dbad21a2e4293d8ab134042fdb05cd06897af671231b579bd24b4"
+  },
+  {
+   "path": "csv/slot_candidate.csv",
+   "bytes": 257929,
+   "sha256": "ed576043ce4d95194a42f79cf098e48bcbe5dbc7fcce863b0a61a0a2ed6541b9"
+  },
+  {
+   "path": "csv/slotting_exception.csv",
+   "bytes": 10397,
+   "sha256": "936d2848289325251cff81a8a54ad6b36a616afff3f33fba6c849e3af469cb5b"
+  },
+  {
+   "path": "csv/state_event.csv",
+   "bytes": 1767505,
+   "sha256": "ac8e7f51570d3c77bbeb0bbf7f97594445b9b3c269c2b6bdd4ab0748aab06408"
+  },
+  {
+   "path": "csv/storage_class.csv",
+   "bytes": 275,
+   "sha256": "3eb715806417d3f43e0d08b67dc147a69bc54794ad79c76215540ef45c0ee1d6"
+  },
+  {
+   "path": "csv/supplier.csv",
+   "bytes": 903,
+   "sha256": "da34bc2e00d1d5e05130ed899acef69e06c27267bc7279381e852179ff7aca54"
+  },
+  {
+   "path": "csv/warehouse.csv",
+   "bytes": 248,
+   "sha256": "e4bc11c25556d1d0d565fa1c5e18606ffa1876c6a82acaea0932357c2c52f2bb"
+  },
+  {
+   "path": "csv/warehouse_sku.csv",
+   "bytes": 23775,
+   "sha256": "25359819d87043447a1c35dba52777f0dcf54b46f0bbd2fc24e5d741f4165c57"
+  },
+  {
+   "path": "csv/zone.csv",
+   "bytes": 720,
+   "sha256": "5c4e24fcbedd073f0e072ef41420c7c8a32000c29b4e9252d367f2f76db9f8d5"
+  },
+  {
+   "path": "csv/zone_storage_class.csv",
+   "bytes": 291,
+   "sha256": "0c7a0b518513a28cc3fb52658a8eaf0a2a567787308bfbcfeadebcbfcea70c42"
+  },
+  {
+   "path": "ground_truth/demand_truth.csv",
+   "bytes": 25157,
+   "sha256": "66aa450527069734b61020d989a4875ec5d86a86cba42488a28a25db284eccbe"
+  },
+  {
+   "path": "ground_truth/ground_truth.csv",
+   "bytes": 7627,
+   "sha256": "b1f6cc04ea617dc225338d5056c0208454a91203df5c579f551fa11e90ec6d11"
+  },
+  {
+   "path": "ground_truth/ground_truth.json",
+   "bytes": 15676,
+   "sha256": "46e9a436451e145c7000941510c72d2a793fb24108e1d7c1473e4aa698fdf7f0"
+  },
+  {
+   "path": "json/aisle.json",
+   "bytes": 2798,
+   "sha256": "9f36017d1abff27f59c9805031823d73c3e64d099d7aa1b1d36bbb9a9adfcd55"
+  },
+  {
+   "path": "json/aisle_block.json",
+   "bytes": 4543,
+   "sha256": "8072275624016f47093eb29334f2953b9212a70ba684aab4412a73c4e7fe0684"
+  },
+  {
+   "path": "json/compatibility_rule.json",
+   "bytes": 1427,
+   "sha256": "ee7e3eaf3838840c1731298a6ee55c04a83f35aefe1f731229019d80a325325e"
+  },
+  {
+   "path": "json/labor_capacity.json",
+   "bytes": 37192,
+   "sha256": "95e93972d37c2a08b83bedb5cb611e1f9a85885c7aeb199f32d2cb25af7d5313"
+  },
+  {
+   "path": "json/location.json",
+   "bytes": 379902,
+   "sha256": "77eb1836fc954df0628fed8f49738360b82e68b7fc4fc324ac70fa6dd18d4058"
+  },
+  {
+   "path": "json/order_line.json",
+   "bytes": 1541226,
+   "sha256": "653aa5ebfe51057f52a1afdc6c3a9906e945b578a8d1298ba314ee3dd864dc67"
+  },
+  {
+   "path": "json/orders.json",
+   "bytes": 1727131,
+   "sha256": "7baaea64230b85d7ea7b9994947fccc33753b40e648f865385385114cc81838b"
+  },
+  {
+   "path": "json/pick_event.json",
+   "bytes": 3600833,
+   "sha256": "32ecbf877bad29c8a1c459717779824c8e3b9c6422ad4352b026148d597603cc"
+  },
+  {
+   "path": "json/replen_labor_daily.json",
+   "bytes": 67572,
+   "sha256": "94de78681b173caec15d12c0be3c2c7bb07325d982892617410ea4a2b265ecf7"
+  },
+  {
+   "path": "json/replenishment.json",
+   "bytes": 588622,
+   "sha256": "6d26a84d186005b7d3f925e3e04d5f8e910893045aa6b0f5bfacaabca8ebd313"
+  },
+  {
+   "path": "json/sku.json",
+   "bytes": 196202,
+   "sha256": "2767804660e9ce1c54f21ff93643a307f99b5b0c73b5260a50769b67df30b1da"
+  },
+  {
+   "path": "json/sku_profile.json",
+   "bytes": 677192,
+   "sha256": "cb7b669b0f8bad7447cb072e37bd30d1868f0561ab3a1a577a92326da9e5080e"
+  },
+  {
+   "path": "json/slot_assignment.json",
+   "bytes": 694084,
+   "sha256": "5aa57356894d2fa3349e92f2b827ccf6b6feccf6a58de1f9933ff2bc26048af1"
+  },
+  {
+   "path": "json/slot_candidate.json",
+   "bytes": 675379,
+   "sha256": "f7051092f369f2b0986953867e8ca4ab2372d601f4e024cab641bb98499194e7"
+  },
+  {
+   "path": "json/slotting_exception.json",
+   "bytes": 18243,
+   "sha256": "7708f5dcbcc1fc7ad7ea581482b24a08fdc7d86c07e2ac329847c8a8f5dc2ee1"
+  },
+  {
+   "path": "json/state_event.json",
+   "bytes": 4034983,
+   "sha256": "7c33875129468c90d3d85b65929c5ac7f615a359d971d1f6750b2e3b3d8c3bc4"
+  },
+  {
+   "path": "json/storage_class.json",
+   "bytes": 561,
+   "sha256": "05d5358357b76973cc7a29007998b90a4e2f2500a61b020ad7c2ab5944301612"
+  },
+  {
+   "path": "json/supplier.json",
+   "bytes": 2485,
+   "sha256": "ce9e928857e038ab5187c75fe0a71f12c6b4bd66f066fb330f46853a0199d833"
+  },
+  {
+   "path": "json/warehouse.json",
+   "bytes": 439,
+   "sha256": "e1102b8dae68a88deaa955f64286611461b82ef5ae763847775744c01051c377"
+  },
+  {
+   "path": "json/warehouse_sku.json",
+   "bytes": 66841,
+   "sha256": "bbaea6e6dd42c032eb722876756dc06e11abbb99aa7364404f4df72fc47ac8eb"
+  },
+  {
+   "path": "json/zone.json",
+   "bytes": 2197,
+   "sha256": "992278ea23d54b9d8ed55958b14bf53ccf5efb3148995e2f4981634ce557851a"
+  },
+  {
+   "path": "json/zone_storage_class.json",
+   "bytes": 799,
+   "sha256": "c5b95004a004cba620aa0388f997ca68c851aa8c168d6edcc52f3f2bfd44107c"
+  },
+  {
+   "path": "reports/evaluation.md",
+   "bytes": 2119,
+   "sha256": "c6f9833d206db772b33a131369f1be588e591c9105b8bc69134f21df319425e7"
+  },
+  {
+   "path": "reports/metrics.json",
+   "bytes": 7273,
+   "sha256": "03589e31e4d7fb647471740df266d7cc00bb71c9362a47cecf03c2f485bd6c4c"
+  },
+  {
+   "path": "reports/report.html",
+   "bytes": 7442,
+   "sha256": "9e2cd836f92a8bbd11eea0f3e48245d5bf27c49b415c9693a4c15b868c19709a"
+  },
+  {
+   "path": "reports/scenario_by_warehouse.csv",
+   "bytes": 749,
+   "sha256": "6a1924fbfcf12cc00ffbcc827b0b97c30e391372fd162de4230a214bba6e761d"
+  },
+  {
+   "path": "reports/scenario_order_paths.csv",
+   "bytes": 84248,
+   "sha256": "2f415b17517d37259e45eeef9f60faf318bc2fc5d2d23e0f5cda9cded4e81ab4"
+  },
+  {
+   "path": "reports/scenario_summary.csv",
+   "bytes": 606,
+   "sha256": "fb29ffc80d7209d316a0faff6fcbee29a96baf7af7c3b4e0b78aebbce885d540"
+  },
+  {
+   "path": "reports/validation_summary.json",
+   "bytes": 42423,
+   "sha256": "c46fec0f0bfe5ffc53366a313451b9a5daa9622de584ae44423c53f05dfcc30b"
+  },
+  {
+   "path": "reports/validation_summary.md",
+   "bytes": 16261,
+   "sha256": "aaaad6c04724837de71c555fc20c6e79342cb0d31245c70624faeef039d1035d"
+  },
+  {
+   "path": "schema/data_dictionary.json",
+   "bytes": 79730,
+   "sha256": "a5dc3724e7ee5570dbcf988d28cf9b0342e797bc93af26ad77fcca71c54392e0"
+  },
+  {
+   "path": "sql/schema.sql",
+   "bytes": 16466,
+   "sha256": "3cf7bfee6ce88509884a401f4b72757baaff2565a41a0e3051641fb98f996219"
+  },
+  {
+   "path": "sql/seed.sql",
+   "bytes": 7665584,
+   "sha256": "f8459ebae4a83bbc97bccc9c0f918f978ccb1f46e6deb7f51ace05f6e7c7d05f"
+  }
+ ]
+}

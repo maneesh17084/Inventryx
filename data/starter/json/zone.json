@@ -1,0 +1,14 @@
+[
+{"zone_id":"WH-001-Z01","warehouse_id":"WH-001","zone_code":"Z01","zone_type":"FORWARD_PICK","temp_class":"AMBIENT","travel_rank":1,"aisle_count":2,"location_count":112,"status":"ACTIVE"},
+{"zone_id":"WH-001-Z02","warehouse_id":"WH-001","zone_code":"Z02","zone_type":"SHELF","temp_class":"AMBIENT","travel_rank":2,"aisle_count":2,"location_count":140,"status":"ACTIVE"},
+{"zone_id":"WH-001-Z03","warehouse_id":"WH-001","zone_code":"Z03","zone_type":"CHILLED","temp_class":"CHILLED","travel_rank":3,"aisle_count":1,"location_count":56,"status":"ACTIVE"},
+{"zone_id":"WH-001-Z04","warehouse_id":"WH-001","zone_code":"Z04","zone_type":"FROZEN","temp_class":"FROZEN","travel_rank":4,"aisle_count":1,"location_count":42,"status":"ACTIVE"},
+{"zone_id":"WH-001-Z05","warehouse_id":"WH-001","zone_code":"Z05","zone_type":"HAZMAT","temp_class":"AMBIENT","travel_rank":5,"aisle_count":1,"location_count":32,"status":"ACTIVE"},
+{"zone_id":"WH-001-Z06","warehouse_id":"WH-001","zone_code":"Z06","zone_type":"BULK","temp_class":"AMBIENT","travel_rank":6,"aisle_count":2,"location_count":84,"status":"ACTIVE"},
+{"zone_id":"WH-002-Z01","warehouse_id":"WH-002","zone_code":"Z01","zone_type":"FORWARD_PICK","temp_class":"AMBIENT","travel_rank":1,"aisle_count":2,"location_count":128,"status":"ACTIVE"},
+{"zone_id":"WH-002-Z02","warehouse_id":"WH-002","zone_code":"Z02","zone_type":"SHELF","temp_class":"AMBIENT","travel_rank":2,"aisle_count":2,"location_count":160,"status":"ACTIVE"},
+{"zone_id":"WH-002-Z03","warehouse_id":"WH-002","zone_code":"Z03","zone_type":"CHILLED","temp_class":"CHILLED","travel_rank":3,"aisle_count":1,"location_count":64,"status":"ACTIVE"},
+{"zone_id":"WH-002-Z04","warehouse_id":"WH-002","zone_code":"Z04","zone_type":"FROZEN","temp_class":"FROZEN","travel_rank":4,"aisle_count":1,"location_count":48,"status":"ACTIVE"},
+{"zone_id":"WH-002-Z05","warehouse_id":"WH-002","zone_code":"Z05","zone_type":"HAZMAT","temp_class":"AMBIENT","travel_rank":5,"aisle_count":2,"location_count":38,"status":"ACTIVE"},
+{"zone_id":"WH-002-Z06","warehouse_id":"WH-002","zone_code":"Z06","zone_type":"BULK","temp_class":"AMBIENT","travel_rank":6,"aisle_count":2,"location_count":96,"status":"ACTIVE"}
+]

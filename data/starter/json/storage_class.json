@@ -1,0 +1,7 @@
+[
+{"storage_class_code":"AMBIENT","description":"Ambient, standard handling","temp_min_c":10.0,"temp_max_c":30.0},
+{"storage_class_code":"CHILLED","description":"Chilled 2-8 C","temp_min_c":2.0,"temp_max_c":8.0},
+{"storage_class_code":"FROZEN","description":"Frozen -25 to -18 C","temp_min_c":-25.0,"temp_max_c":-18.0},
+{"storage_class_code":"HAZMAT","description":"Dangerous goods cabinet, ambient","temp_min_c":10.0,"temp_max_c":25.0},
+{"storage_class_code":"OVERSIZE","description":"Oversized / pallet-handled ambient","temp_min_c":10.0,"temp_max_c":30.0}
+]

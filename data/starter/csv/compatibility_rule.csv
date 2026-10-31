@@ -1,0 +1,10 @@
+rule_id,key_a,key_b,relation,scope,description
+CMP-001,2.1,5.1,INCOMPATIBLE,SAME_BAY,Flammable gas must be segregated from oxidizers
+CMP-002,3,5.1,INCOMPATIBLE,SAME_BAY,Flammable liquid must be segregated from oxidizers
+CMP-003,5.1,8,INCOMPATIBLE,SAME_BAY,Oxidizers must be segregated from corrosives
+CMP-004,2.1,8,INCOMPATIBLE,SAME_BAY,Flammable gas must be segregated from corrosives
+CMP-005,2.1,FOOD,INCOMPATIBLE,SAME_BAY,Food must not share a bay with flammable gas
+CMP-006,3,FOOD,INCOMPATIBLE,SAME_BAY,Food must not share a bay with flammable liquids
+CMP-007,5.1,FOOD,INCOMPATIBLE,SAME_BAY,Food must not share a bay with oxidizers
+CMP-008,8,FOOD,INCOMPATIBLE,SAME_BAY,Food must not share a bay with corrosives
+CMP-009,9,FOOD,INCOMPATIBLE,SAME_BAY,Food must not share a bay with misc. dangerous goods

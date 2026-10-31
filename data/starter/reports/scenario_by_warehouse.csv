@@ -1,0 +1,7 @@
+scenario,warehouse_id,orders,lines,distance_m,distance_per_order_m,distance_per_line_m,picker_hours,lines_per_picker_hour,golden_zone_pick_share,replen_tasks,emergency_replen,replen_minutes,labor_days_exceeded,over_capacity_min
+BASELINE_LEGACY,WH-001,241,671,16206.8,67.25,24.153,9.9,67.78,0.4471,99,32,413.48,1,4.92
+BASELINE_LEGACY,WH-002,278,778,19036.8,68.48,24.469,11.59,67.14,0.5077,86,18,348.54,0,0.0
+OPT_STATIC_V1,WH-001,241,671,12891.0,53.49,19.212,8.82,76.11,0.6647,38,6,147.73,0,0.0
+OPT_STATIC_V1,WH-002,278,778,16160.0,58.13,20.771,10.62,73.26,0.7031,46,7,182.01,0,0.0
+OPT_PEAK_V2,WH-001,241,671,12349.8,51.24,18.405,8.62,77.88,0.7317,38,6,147.57,0,0.0
+OPT_PEAK_V2,WH-002,278,778,15810.8,56.87,20.322,10.49,74.13,0.7352,45,7,177.92,0,0.0

@@ -1,0 +1,2086 @@
+{
+ "total": 210,
+ "passed": 210,
+ "failed": 0,
+ "by_category": {
+  "date_order": {
+   "PASS": 7
+  },
+  "distribution": {
+   "PASS": 9
+  },
+  "duplicates": {
+   "PASS": 14
+  },
+  "enum": {
+   "PASS": 22
+  },
+  "foreign_key": {
+   "PASS": 46
+  },
+  "ground_truth": {
+   "PASS": 9
+  },
+  "join": {
+   "PASS": 11
+  },
+  "leakage": {
+   "PASS": 2
+  },
+  "lifecycle": {
+   "PASS": 4
+  },
+  "physical_constraints": {
+   "PASS": 3
+  },
+  "primary_key": {
+   "PASS": 22
+  },
+  "reconciliation": {
+   "PASS": 13
+  },
+  "reproducibility": {
+   "PASS": 2
+  },
+  "schema": {
+   "PASS": 45
+  },
+  "sql": {
+   "PASS": 1
+  }
+ },
+ "checks": [
+  {
+   "category": "schema",
+   "check": "CSV headers match schema; every value parses to its declared type",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "storage_class: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "storage_class: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "storage_class: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "storage_class: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "warehouse: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "warehouse: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "warehouse: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "warehouse: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "duplicates",
+   "check": "warehouse.warehouse_name: unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "zone: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "zone: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "zone: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "zone: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "duplicates",
+   "check": "zone: natural key warehouse_id+zone_code unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "zone_storage_class: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "zone_storage_class: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "zone_storage_class: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "zone_storage_class: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "aisle: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "aisle: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "aisle: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "aisle: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "duplicates",
+   "check": "aisle: natural key warehouse_id+aisle_no unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "location: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "location: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "location: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "location: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "duplicates",
+   "check": "location: natural key aisle_id+side+bay+level unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "supplier: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "supplier: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "supplier: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "supplier: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "sku: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "sku: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "sku: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "sku: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "warehouse_sku: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "warehouse_sku: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "warehouse_sku: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "warehouse_sku: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "compatibility_rule: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "compatibility_rule: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "compatibility_rule: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "compatibility_rule: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "duplicates",
+   "check": "compatibility_rule: natural key key_a+key_b unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "sku_profile: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "sku_profile: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "sku_profile: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "sku_profile: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "duplicates",
+   "check": "sku_profile: natural key warehouse_id+sku_id+version unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "slot_assignment: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "slot_assignment: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "slot_assignment: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "slot_assignment: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "slot_candidate: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "slot_candidate: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "slot_candidate: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "slot_candidate: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "duplicates",
+   "check": "slot_candidate: natural key plan_code+warehouse_id+sku_id+candidate_rank unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "aisle_block: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "aisle_block: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "aisle_block: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "aisle_block: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "orders: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "orders: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "orders: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "orders: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "order_line: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "order_line: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "order_line: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "order_line: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "duplicates",
+   "check": "order_line: natural key order_id+line_no unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "pick_event: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "pick_event: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "pick_event: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "pick_event: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "duplicates",
+   "check": "pick_event.order_line_id: unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "replenishment: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "replenishment: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "replenishment: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "replenishment: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "labor_capacity: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "labor_capacity: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "labor_capacity: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "labor_capacity: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "duplicates",
+   "check": "labor_capacity: natural key warehouse_id+work_date unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "replen_labor_daily: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "replen_labor_daily: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "replen_labor_daily: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "replen_labor_daily: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "duplicates",
+   "check": "replen_labor_daily: natural key warehouse_id+work_date unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "state_event: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "state_event: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "state_event: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "state_event: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "slotting_exception: required fields populated",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "enum",
+   "check": "slotting_exception: allowed values",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "schema",
+   "check": "slotting_exception: ID / code formats",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "primary_key",
+   "check": "slotting_exception: primary key unique",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "zone.warehouse_id -> warehouse.warehouse_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "zone_storage_class.zone_id -> zone.zone_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "zone_storage_class.storage_class_code -> storage_class.storage_class_code",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "aisle.warehouse_id -> warehouse.warehouse_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "aisle.zone_id -> zone.zone_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "location.warehouse_id -> warehouse.warehouse_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "location.zone_id -> zone.zone_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "location.aisle_id -> aisle.aisle_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "sku.supplier_id -> supplier.supplier_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "sku.required_storage_class -> storage_class.storage_class_code",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "warehouse_sku.warehouse_id -> warehouse.warehouse_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "warehouse_sku.sku_id -> sku.sku_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "sku_profile.warehouse_id -> warehouse.warehouse_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "sku_profile.sku_id -> sku.sku_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "sku_profile.prior_profile_id -> sku_profile.profile_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "slot_assignment.warehouse_id -> warehouse.warehouse_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "slot_assignment.sku_id -> sku.sku_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "slot_assignment.location_id -> location.location_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "slot_assignment.profile_id -> sku_profile.profile_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "slot_assignment.previous_slot_id -> slot_assignment.slot_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "slot_candidate.warehouse_id -> warehouse.warehouse_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "slot_candidate.sku_id -> sku.sku_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "slot_candidate.profile_id -> sku_profile.profile_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "slot_candidate.location_id -> location.location_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "slot_candidate.slot_id -> slot_assignment.slot_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "aisle_block.warehouse_id -> warehouse.warehouse_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "aisle_block.aisle_id -> aisle.aisle_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "orders.warehouse_id -> warehouse.warehouse_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "orders.hold_block_id -> aisle_block.block_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "order_line.order_id -> orders.order_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "order_line.sku_id -> sku.sku_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "pick_event.order_id -> orders.order_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "pick_event.order_line_id -> order_line.order_line_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "pick_event.warehouse_id -> warehouse.warehouse_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "pick_event.sku_id -> sku.sku_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "pick_event.slot_id -> slot_assignment.slot_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "pick_event.location_id -> location.location_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "pick_event.aisle_id -> aisle.aisle_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "replenishment.warehouse_id -> warehouse.warehouse_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "replenishment.sku_id -> sku.sku_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "replenishment.slot_id -> slot_assignment.slot_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "replenishment.location_id -> location.location_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "labor_capacity.warehouse_id -> warehouse.warehouse_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "replen_labor_daily.warehouse_id -> warehouse.warehouse_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "replen_labor_daily.labor_capacity_id -> labor_capacity.labor_capacity_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "foreign_key",
+   "check": "slotting_exception.warehouse_id -> warehouse.warehouse_id",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "join",
+   "check": "zone/aisle IDs embed their warehouse",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "join",
+   "check": "location: ID embeds zone, zone/aisle/warehouse consistent, bay_key and x derived",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "join",
+   "check": "order_line: ID embeds order; SKU stocked at order's warehouse",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "join",
+   "check": "pick_event: order/line/SKU/slot/location/aisle all agree",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "join",
+   "check": "replenishment: slot/SKU/location/warehouse agree",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "join",
+   "check": "slot_assignment: location in same warehouse; SKU stocked; profile matches",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "join",
+   "check": "sku_profile: exactly one profile per stocked warehouse-SKU per version",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "join",
+   "check": "slot_candidate: selected candidate is the slot's location",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "join",
+   "check": "replen_labor_daily: capacity record matches warehouse/date",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "join",
+   "check": "state_event: polymorphic entity_id resolves",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "join",
+   "check": "slotting_exception: entity_id resolves",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "date_order",
+   "check": "orders: order <= release <= (hold release) <= picks <= picked <= shipped",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "date_order",
+   "check": "slot_assignment: effective_from < effective_to; created/decision ordering",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "date_order",
+   "check": "sku_profile: window_start <= window_end < effective_from < effective_to",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "date_order",
+   "check": "aisle_block: start < end",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "date_order",
+   "check": "replenishment: created <= completed",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "date_order",
+   "check": "pick_event: slot in force on the pick date",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "date_order",
+   "check": "stocking starts after SKU creation; locations after warehouse opening",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "reconciliation",
+   "check": "warehouse/zone counts = COUNT(children)",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "reconciliation",
+   "check": "location: volume_l and is_golden_zone derived correctly",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "reconciliation",
+   "check": "sku: volume, oversize flag and storage class derived correctly",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "reconciliation",
+   "check": "orders: line_count and total_units = SUM(order_line)",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "reconciliation",
+   "check": "order_line: qty_picked = SUM(pick_event.qty); status consistent",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "reconciliation",
+   "check": "pick tours: sequence, legs, return leg and pick_distance_m re-derived by router",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "reconciliation",
+   "check": "sku_profile: lines, units, active days and rates re-derived from order lines",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "reconciliation",
+   "check": "slot_assignment: units_capacity = fit, reorder point = floor(0.30 x capacity)",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "reconciliation",
+   "check": "slot_candidate: total = pick + replen",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "reconciliation",
+   "check": "replenishment: units = after - before; after = capacity; minutes re-derived",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "reconciliation",
+   "check": "replenishment: pick-face inventory balance replayed from pick events",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "reconciliation",
+   "check": "replen_labor_daily: workload, utilisation, status = SUM(replenishment) vs capacity",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "reconciliation",
+   "check": "holdout: actual history == OPT_PEAK replay (distance, replen tasks)",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "lifecycle",
+   "check": "state_event: every transition is allowed by the entity lifecycle",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "lifecycle",
+   "check": "state_event: each from_status equals the previous to_status (no gaps)",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "lifecycle",
+   "check": "state_event: IDs are chronological (append-only log)",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "lifecycle",
+   "check": "current status column == last state_event (history not overwritten)",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "duplicates",
+   "check": "no two committed assignments hold one location at the same time",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "duplicates",
+   "check": "one live slot per warehouse-SKU at any time (approved moves excluded)",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "duplicates",
+   "check": "state_event: no duplicated transitions",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "physical_constraints",
+   "check": "committed slots: SKU fits (dimensions, weight, max_order_qty)",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "physical_constraints",
+   "check": "committed slots: zone provides the SKU's storage class; location ACTIVE",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "physical_constraints",
+   "check": "committed slots: no incompatible goods share a bay",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "reproducibility",
+   "check": "engine re-run on CSVs reproduces every proposal decision",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "reproducibility",
+   "check": "detectors re-run on CSVs reproduce slotting_exception",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "leakage",
+   "check": "no label/ground-truth columns in any input or derived table",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "leakage",
+   "check": "ground truth stored only under ground_truth/",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "sql",
+   "check": "schema.sql + seed.sql load into SQLite with FK enforcement; row counts match CSV",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "ground_truth",
+   "check": "every ground-truth entity exists in the dataset",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "ground_truth",
+   "check": "LOCATION_CAPACITY_EXCEEDED: engine flags == ground truth (precision & recall = 1)",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": {
+    "positives": 8,
+    "flagged": 8,
+    "tp": 8,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   }
+  },
+  {
+   "category": "ground_truth",
+   "check": "STORAGE_CLASS_MISMATCH: engine flags == ground truth (precision & recall = 1)",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": {
+    "positives": 4,
+    "flagged": 4,
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   }
+  },
+  {
+   "category": "ground_truth",
+   "check": "INCOMPATIBLE_CO_LOCATION: engine flags == ground truth (precision & recall = 1)",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": {
+    "positives": 4,
+    "flagged": 4,
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   }
+  },
+  {
+   "category": "ground_truth",
+   "check": "DUPLICATE_ACTIVE_LOCATION: engine flags == ground truth (precision & recall = 1)",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": {
+    "positives": 6,
+    "flagged": 6,
+    "tp": 6,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   }
+  },
+  {
+   "category": "ground_truth",
+   "check": "PICK_PATH_BLOCKED_AISLE: engine flags == ground truth (precision & recall = 1)",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": {
+    "positives": 4,
+    "flagged": 4,
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   }
+  },
+  {
+   "category": "ground_truth",
+   "check": "REPLEN_LABOR_EXCEEDED: engine flags == ground truth (precision & recall = 1)",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": {
+    "positives": 9,
+    "flagged": 9,
+    "tp": 9,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   }
+  },
+  {
+   "category": "ground_truth",
+   "check": "negative and boundary controls raise no exception",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": {
+    "controls": 14,
+    "false_alarms": 0,
+    "specificity": 1.0
+   }
+  },
+  {
+   "category": "ground_truth",
+   "check": "proposal decisions match expected_decision",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": null
+  },
+  {
+   "category": "distribution",
+   "check": "top20_sku_line_share within [0.55, 0.95]",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": {
+    "top20_sku_line_share": 0.648
+   }
+  },
+  {
+   "category": "distribution",
+   "check": "peak_volume_lift within [1.2, 1.7]",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": {
+    "peak_volume_lift": 1.353
+   }
+  },
+  {
+   "category": "distribution",
+   "check": "weekend_weekday_ratio within [0.5, 0.85]",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": {
+    "weekend_weekday_ratio": 0.623
+   }
+  },
+  {
+   "category": "distribution",
+   "check": "oversized_share within [0.03, 0.12]",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": {
+    "oversized_share": 0.044
+   }
+  },
+  {
+   "category": "distribution",
+   "check": "hazmat_share within [0.03, 0.09]",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": {
+    "hazmat_share": 0.072
+   }
+  },
+  {
+   "category": "distribution",
+   "check": "cold_chain_share within [0.12, 0.25]",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": {
+    "cold_chain_share": 0.182
+   }
+  },
+  {
+   "category": "distribution",
+   "check": "class_d_profiles within [1, inf]",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": {
+    "class_d_profiles": 336
+   }
+  },
+  {
+   "category": "distribution",
+   "check": "peak_up_trends within [1, inf]",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": {
+    "peak_up_trends": 140
+   }
+  },
+  {
+   "category": "distribution",
+   "check": "down_trends within [1, inf]",
+   "status": "PASS",
+   "violations": 0,
+   "sample": [],
+   "detail": "",
+   "info": {
+    "down_trends": 249
+   }
+  }
+ ],
+ "ground_truth_metrics": {
+  "LOCATION_CAPACITY_EXCEEDED": {
+   "positives": 8,
+   "flagged": 8,
+   "tp": 8,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "STORAGE_CLASS_MISMATCH": {
+   "positives": 4,
+   "flagged": 4,
+   "tp": 4,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "INCOMPATIBLE_CO_LOCATION": {
+   "positives": 4,
+   "flagged": 4,
+   "tp": 4,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "DUPLICATE_ACTIVE_LOCATION": {
+   "positives": 6,
+   "flagged": 6,
+   "tp": 6,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "PICK_PATH_BLOCKED_AISLE": {
+   "positives": 4,
+   "flagged": 4,
+   "tp": 4,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "REPLEN_LABOR_EXCEEDED": {
+   "positives": 9,
+   "flagged": 9,
+   "tp": 9,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "NEGATIVE_CONTROLS": {
+   "controls": 14,
+   "false_alarms": 0,
+   "specificity": 1.0
+  }
+ },
+ "distribution": {
+  "top20_sku_line_share": 0.648,
+  "peak_volume_lift": 1.353,
+  "weekend_weekday_ratio": 0.623,
+  "oversized_share": 0.044,
+  "hazmat_share": 0.072,
+  "cold_chain_share": 0.182,
+  "class_d_profiles": 336,
+  "peak_up_trends": 140,
+  "down_trends": 249
+ }
+}

@@ -1,0 +1,21 @@
+supplier_id,supplier_name,country_code,lead_time_days,status
+SUP-0001,Juniper Goods 0001,DE,4,ACTIVE
+SUP-0002,Horizon Manufacturing 0002,MX,34,ACTIVE
+SUP-0003,Falcon Trading 0003,VN,2,ACTIVE
+SUP-0004,Lumen Supply 0004,US,12,ACTIVE
+SUP-0005,Golden Goods 0005,MX,20,ACTIVE
+SUP-0006,Delta Supply 0006,CA,26,ACTIVE
+SUP-0007,Meridian Goods 0007,CN,35,ACTIVE
+SUP-0008,Orchid Supply 0008,US,4,ACTIVE
+SUP-0009,Apex Imports 0009,CN,45,ACTIVE
+SUP-0010,Meridian Industries 0010,DE,40,ACTIVE
+SUP-0011,Blue Brands 0011,CN,28,ACTIVE
+SUP-0012,Falcon Manufacturing 0012,MX,10,ACTIVE
+SUP-0013,Keystone Imports 0013,US,35,ACTIVE
+SUP-0014,Iris Brands 0014,DE,37,ACTIVE
+SUP-0015,Keystone Trading 0015,VN,34,ACTIVE
+SUP-0016,Delta Brands 0016,MX,29,ACTIVE
+SUP-0017,Horizon Manufacturing 0017,VN,28,ACTIVE
+SUP-0018,Nova Trading 0018,DE,14,ACTIVE
+SUP-0019,Lumen Trading 0019,US,17,ACTIVE
+SUP-0020,Nova Supply 0020,DE,38,ACTIVE

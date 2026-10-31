@@ -1,0 +1,25 @@
+# Environments
+.venv/
+venv/
+env/
+# Caches and compiled files
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+*.pyc
+*.pyo
+# OS / editor junk, logs, temp files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+# Build output and nested archives
+dist/
+*.zip
+# Runtime state (interactive proposal logs)
+data/runtime/
+# Regenerable dataset (~270 MB): python run.py generate --profile full
+data/full/

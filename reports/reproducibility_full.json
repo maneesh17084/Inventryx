@@ -1,0 +1,250 @@
+{
+ "profile": "full",
+ "seed": 20261022,
+ "files_compared": 58,
+ "identical": true,
+ "differing_files": [],
+ "row_counts_a": {
+  "storage_class": {
+   "kind": "reference",
+   "rows": 5
+  },
+  "warehouse": {
+   "kind": "master",
+   "rows": 20
+  },
+  "zone": {
+   "kind": "master",
+   "rows": 120
+  },
+  "zone_storage_class": {
+   "kind": "bridge",
+   "rows": 140
+  },
+  "aisle": {
+   "kind": "master",
+   "rows": 195
+  },
+  "location": {
+   "kind": "master",
+   "rows": 10000
+  },
+  "supplier": {
+   "kind": "master",
+   "rows": 120
+  },
+  "sku": {
+   "kind": "master",
+   "rows": 5000
+  },
+  "warehouse_sku": {
+   "kind": "bridge",
+   "rows": 6495
+  },
+  "compatibility_rule": {
+   "kind": "reference",
+   "rows": 9
+  },
+  "sku_profile": {
+   "kind": "derived",
+   "rows": 12990
+  },
+  "slot_assignment": {
+   "kind": "transaction",
+   "rows": 13160
+  },
+  "slot_candidate": {
+   "kind": "derived",
+   "rows": 19461
+  },
+  "aisle_block": {
+   "kind": "event",
+   "rows": 182
+  },
+  "orders": {
+   "kind": "transaction",
+   "rows": 37248
+  },
+  "order_line": {
+   "kind": "transaction",
+   "rows": 100000
+  },
+  "pick_event": {
+   "kind": "event",
+   "rows": 99387
+  },
+  "replenishment": {
+   "kind": "event",
+   "rows": 15723
+  },
+  "labor_capacity": {
+   "kind": "master",
+   "rows": 2400
+  },
+  "replen_labor_daily": {
+   "kind": "derived",
+   "rows": 2400
+  },
+  "state_event": {
+   "kind": "event",
+   "rows": 206876
+  },
+  "slotting_exception": {
+   "kind": "derived",
+   "rows": 331
+  }
+ },
+ "row_counts_b": {
+  "storage_class": {
+   "kind": "reference",
+   "rows": 5
+  },
+  "warehouse": {
+   "kind": "master",
+   "rows": 20
+  },
+  "zone": {
+   "kind": "master",
+   "rows": 120
+  },
+  "zone_storage_class": {
+   "kind": "bridge",
+   "rows": 140
+  },
+  "aisle": {
+   "kind": "master",
+   "rows": 195
+  },
+  "location": {
+   "kind": "master",
+   "rows": 10000
+  },
+  "supplier": {
+   "kind": "master",
+   "rows": 120
+  },
+  "sku": {
+   "kind": "master",
+   "rows": 5000
+  },
+  "warehouse_sku": {
+   "kind": "bridge",
+   "rows": 6495
+  },
+  "compatibility_rule": {
+   "kind": "reference",
+   "rows": 9
+  },
+  "sku_profile": {
+   "kind": "derived",
+   "rows": 12990
+  },
+  "slot_assignment": {
+   "kind": "transaction",
+   "rows": 13160
+  },
+  "slot_candidate": {
+   "kind": "derived",
+   "rows": 19461
+  },
+  "aisle_block": {
+   "kind": "event",
+   "rows": 182
+  },
+  "orders": {
+   "kind": "transaction",
+   "rows": 37248
+  },
+  "order_line": {
+   "kind": "transaction",
+   "rows": 100000
+  },
+  "pick_event": {
+   "kind": "event",
+   "rows": 99387
+  },
+  "replenishment": {
+   "kind": "event",
+   "rows": 15723
+  },
+  "labor_capacity": {
+   "kind": "master",
+   "rows": 2400
+  },
+  "replen_labor_daily": {
+   "kind": "derived",
+   "rows": 2400
+  },
+  "state_event": {
+   "kind": "event",
+   "rows": 206876
+  },
+  "slotting_exception": {
+   "kind": "derived",
+   "rows": 331
+  }
+ },
+ "row_counts_equal": true,
+ "matches_published_dataset": true,
+ "differing_from_published": [],
+ "checksums": {
+  "csv/aisle.csv": "5413e0707ffc149f6ca0304393b00eea7eadd47359fa9a6ca4ae1e9463256947",
+  "csv/aisle_block.csv": "fa8209fb9717c6cb5785ab0dd75981563e8979dfca7035388738f766fde2275d",
+  "csv/compatibility_rule.csv": "199be591f0e14a6610813554327312462ff2f818184f3b92899318a0efdd0539",
+  "csv/labor_capacity.csv": "9c8829cbc95c89ea9a90f60e0601c6a1d4ff079ffaa04ee8747f535f71008767",
+  "csv/location.csv": "57bd9dae21f2e422c89a2c944f42ed837318d9fd5b79ebb4401d809e18d6acc1",
+  "csv/order_line.csv": "9c8a94c9365fb33c04bb9cba85e2e157888ba88cb5a308871fc2f01ef0a3fa03",
+  "csv/orders.csv": "7fe7bc4217188ae1da174a8e4c4afdcf0bc09024a2e45bbb79d2e1153c5197e3",
+  "csv/pick_event.csv": "9c4a9445320cfdebf934ef906198492eb542099c136e4551426351cf10c50724",
+  "csv/replen_labor_daily.csv": "bd86588bf839a7c7970f9bf169f3ceb3709f28159bbfcb2f001c4d526abe395b",
+  "csv/replenishment.csv": "8277e750f170694d843bfac82b54f4f9132e0dbffebb5e687964e8dcc40d334e",
+  "csv/sku.csv": "cf44754484a1fea356610ad0c599d06e0da2f28766003683c2cd72d6ce090f19",
+  "csv/sku_profile.csv": "34a27c28389a6852c59b9f1e460bb9665629bb078399a9d258c8124a13211dd7",
+  "csv/slot_assignment.csv": "0c592954253b7dfa445fd52d6c504bfe5b77699e2e8eaedf89e3de0153eea772",
+  "csv/slot_candidate.csv": "5e6eeaece52aa0fdab729f399d40fa48db29eb60cadb5959f9fdfdc7d58640dc",
+  "csv/slotting_exception.csv": "605084ff2043f84d57dc045d65f9accfee1b1c833ce738cd5f6f41e3371fcec5",
+  "csv/state_event.csv": "5071423274a454de149e167dc4ade47929d0db4951a0329d5a948673dae40487",
+  "csv/storage_class.csv": "3eb715806417d3f43e0d08b67dc147a69bc54794ad79c76215540ef45c0ee1d6",
+  "csv/supplier.csv": "ca573365540abddc72badcfd1d6bdf1a30578c3ffeca9d0cb3cf664f8169ac7d",
+  "csv/warehouse.csv": "78d6ed870215b198d47751c35629e476341555c35517af466eef01730d43599b",
+  "csv/warehouse_sku.csv": "e53d77c60a79dcf7330d31e017e19c6f96564619fb9f085d92795bab537d3dac",
+  "csv/zone.csv": "b12f2c2fe96c63d20a8abdfd76665662c02a9e68b9057bca2a1b509061218372",
+  "csv/zone_storage_class.csv": "f48e600bd2cae17799ea9891470c53f34b623729e8adda900e15f1f31569f567",
+  "ground_truth/demand_truth.csv": "ff24477be940e436fb2a77a9202ac7f58bddd6b9975fbeefe0de49ac94c4c614",
+  "ground_truth/ground_truth.csv": "478e7b6edbad04c264e1bc1646aef59d6decda529dc0a878d24df7fd94cbbbb6",
+  "ground_truth/ground_truth.json": "8aedaba7eb9e08850efdfe3d5fe4af2cd2f3dc8d802561ad142ccce13916c28a",
+  "json/aisle.json": "a0fb040f1a943b2ea56c91df0194a0d6830aef374cd208ef1bc25faf7531a3ac",
+  "json/aisle_block.json": "ecfb92302f6afd8468ce82525d4e8a5f4d83c1829bc529c6a80e42360959a113",
+  "json/compatibility_rule.json": "ee7e3eaf3838840c1731298a6ee55c04a83f35aefe1f731229019d80a325325e",
+  "json/labor_capacity.json": "ccc28bc063b04d17531119cadcdd05d641444e59440d11af74fa266b7efdd362",
+  "json/location.json": "54a5acbc7a3b5809fd417a1fe4b27dd45b25a283edb8bb69e6257f0252bb71e1",
+  "json/order_line.json": "f60ccb6588dd68919a74dc89388219b93a913a943af6ee2fbca82d5181654f91",
+  "json/orders.json": "a7dd873783d2245f70d387072296ff9f956f73c2af7be0ae3a572a219dd14855",
+  "json/pick_event.json": "ff2b38f23f0d5f9bb10de92924172b2c094aea45df4565850719dfa1e67012a9",
+  "json/replen_labor_daily.json": "22e012f47183977d1a473d1b647675956b75296403ecaf39e8046223f2ec0e46",
+  "json/replenishment.json": "59b55f62b0850a49e16ade2723ca2542f69d626ddd57085f5ce20d8ffd5b8f13",
+  "json/sku.json": "542b3cfb777cc9a88f3232ba6b86ab74f6c938a9fbdf43211a276fe967ea3b42",
+  "json/sku_profile.json": "f187b3caad6ad6ee3f912f6cd7081044bd706e21df3b8a97ff799c22c45faa0e",
+  "json/slot_assignment.json": "2b21e6512ec9e7211cd8574008a644ca363780d5126f9786f9f93569679916f8",
+  "json/slot_candidate.json": "01a682fcb4216275c678fbde0d093fdcc65c3fad9b0396204e2eb52447f8f787",
+  "json/slotting_exception.json": "6d03aba6b9180f6920a2eeea4f5c3da3feea5d726ca9126da9ef2066d1741a77",
+  "json/state_event.json": "c8beaa5fb310e082307100afe014737d8db01feee414735e1a8f42dc955161db",
+  "json/storage_class.json": "05d5358357b76973cc7a29007998b90a4e2f2500a61b020ad7c2ab5944301612",
+  "json/supplier.json": "7c5dd7df1dce7d69965f95195f24b61be09e0759830b7d086aec90c39a8e4d3b",
+  "json/warehouse.json": "ecd00c50c4c83a40d69b2788ca5c1c97c15d0144efa047e5790a638984efadfb",
+  "json/warehouse_sku.json": "5a204804f88290478e2bce252d45fe74a236307a84981fbd375079291977d0fb",
+  "json/zone.json": "abd5b3468f80e5d480851cc1c4e3f8a559e276412b954647c2051bebc53b55f6",
+  "json/zone_storage_class.json": "4f002aa30f88d998b1af88b7d2de83bec326f543d10e4d4709efa893030d95f1",
+  "reports/evaluation.md": "bae8fa896f566b0b77763a3685dd44c17abf3e99c1359f3c50c39bef3a85b57e",
+  "reports/metrics.json": "6bb9714696f113193ecdb726222ada0d2c480ca640053c6f13a284b15cf6a139",
+  "reports/report.html": "85dfff76fcb29361d77c8b3fa3f63c03b6a78e867c83561f6462d08f95cc8b16",
+  "reports/scenario_by_warehouse.csv": "1524117c420ffb073e70f3817eb618025d23b4ab15d398ac404ae4088af48039",
+  "reports/scenario_order_paths.csv": "da3bac6fda64f46e27ebe836510f3052b1aebbe23784ec3e30b1552de4e89b7c",
+  "reports/scenario_summary.csv": "2100c296fa590a2fce4c9884da87101395859b8d90557a07c6910b96d1f3fa80",
+  "reports/validation_summary.json": "a304ea0b243ff60f0976c4f096582535eb17fdc12cbb65404195573d19cee816",
+  "reports/validation_summary.md": "aaaad6c04724837de71c555fc20c6e79342cb0d31245c70624faeef039d1035d",
+  "schema/data_dictionary.json": "a5dc3724e7ee5570dbcf988d28cf9b0342e797bc93af26ad77fcca71c54392e0",
+  "sql/schema.sql": "3cf7bfee6ce88509884a401f4b72757baaff2565a41a0e3051641fb98f996219",
+  "sql/seed.sql": "20ff016077fbc130557df26269f0a5e25a064a660ece8ca48d18f0673a59c46d"
+ }
+}

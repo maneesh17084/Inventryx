@@ -1,0 +1,4 @@
+[
+{"warehouse_id":"WH-001","warehouse_name":"Riverside DC","region":"WEST","operator_code":"OPR-03","opened_date":"2016-01-04","status":"ACTIVE","aisle_pitch_m":3.0,"location_count":466,"zone_count":6,"aisle_count":9},
+{"warehouse_id":"WH-002","warehouse_name":"Northgate DC","region":"SOUTH","operator_code":"OPR-01","opened_date":"2008-12-22","status":"ACTIVE","aisle_pitch_m":3.0,"location_count":534,"zone_count":6,"aisle_count":10}
+]

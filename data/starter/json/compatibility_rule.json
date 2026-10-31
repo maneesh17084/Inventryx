@@ -1,0 +1,11 @@
+[
+{"rule_id":"CMP-001","key_a":"2.1","key_b":"5.1","relation":"INCOMPATIBLE","scope":"SAME_BAY","description":"Flammable gas must be segregated from oxidizers"},
+{"rule_id":"CMP-002","key_a":"3","key_b":"5.1","relation":"INCOMPATIBLE","scope":"SAME_BAY","description":"Flammable liquid must be segregated from oxidizers"},
+{"rule_id":"CMP-003","key_a":"5.1","key_b":"8","relation":"INCOMPATIBLE","scope":"SAME_BAY","description":"Oxidizers must be segregated from corrosives"},
+{"rule_id":"CMP-004","key_a":"2.1","key_b":"8","relation":"INCOMPATIBLE","scope":"SAME_BAY","description":"Flammable gas must be segregated from corrosives"},
+{"rule_id":"CMP-005","key_a":"2.1","key_b":"FOOD","relation":"INCOMPATIBLE","scope":"SAME_BAY","description":"Food must not share a bay with flammable gas"},
+{"rule_id":"CMP-006","key_a":"3","key_b":"FOOD","relation":"INCOMPATIBLE","scope":"SAME_BAY","description":"Food must not share a bay with flammable liquids"},
+{"rule_id":"CMP-007","key_a":"5.1","key_b":"FOOD","relation":"INCOMPATIBLE","scope":"SAME_BAY","description":"Food must not share a bay with oxidizers"},
+{"rule_id":"CMP-008","key_a":"8","key_b":"FOOD","relation":"INCOMPATIBLE","scope":"SAME_BAY","description":"Food must not share a bay with corrosives"},
+{"rule_id":"CMP-009","key_a":"9","key_b":"FOOD","relation":"INCOMPATIBLE","scope":"SAME_BAY","description":"Food must not share a bay with misc. dangerous goods"}
+]

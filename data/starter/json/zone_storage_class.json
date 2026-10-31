@@ -1,0 +1,16 @@
+[
+{"zone_id":"WH-001-Z01","storage_class_code":"AMBIENT"},
+{"zone_id":"WH-001-Z02","storage_class_code":"AMBIENT"},
+{"zone_id":"WH-001-Z03","storage_class_code":"CHILLED"},
+{"zone_id":"WH-001-Z04","storage_class_code":"FROZEN"},
+{"zone_id":"WH-001-Z05","storage_class_code":"HAZMAT"},
+{"zone_id":"WH-001-Z06","storage_class_code":"AMBIENT"},
+{"zone_id":"WH-001-Z06","storage_class_code":"OVERSIZE"},
+{"zone_id":"WH-002-Z01","storage_class_code":"AMBIENT"},
+{"zone_id":"WH-002-Z02","storage_class_code":"AMBIENT"},
+{"zone_id":"WH-002-Z03","storage_class_code":"CHILLED"},
+{"zone_id":"WH-002-Z04","storage_class_code":"FROZEN"},
+{"zone_id":"WH-002-Z05","storage_class_code":"HAZMAT"},
+{"zone_id":"WH-002-Z06","storage_class_code":"AMBIENT"},
+{"zone_id":"WH-002-Z06","storage_class_code":"OVERSIZE"}
+]

@@ -1,0 +1,22 @@
+[
+{"supplier_id":"SUP-0001","supplier_name":"Juniper Goods 0001","country_code":"DE","lead_time_days":4,"status":"ACTIVE"},
+{"supplier_id":"SUP-0002","supplier_name":"Horizon Manufacturing 0002","country_code":"MX","lead_time_days":34,"status":"ACTIVE"},
+{"supplier_id":"SUP-0003","supplier_name":"Falcon Trading 0003","country_code":"VN","lead_time_days":2,"status":"ACTIVE"},
+{"supplier_id":"SUP-0004","supplier_name":"Lumen Supply 0004","country_code":"US","lead_time_days":12,"status":"ACTIVE"},
+{"supplier_id":"SUP-0005","supplier_name":"Golden Goods 0005","country_code":"MX","lead_time_days":20,"status":"ACTIVE"},
+{"supplier_id":"SUP-0006","supplier_name":"Delta Supply 0006","country_code":"CA","lead_time_days":26,"status":"ACTIVE"},
+{"supplier_id":"SUP-0007","supplier_name":"Meridian Goods 0007","country_code":"CN","lead_time_days":35,"status":"ACTIVE"},
+{"supplier_id":"SUP-0008","supplier_name":"Orchid Supply 0008","country_code":"US","lead_time_days":4,"status":"ACTIVE"},
+{"supplier_id":"SUP-0009","supplier_name":"Apex Imports 0009","country_code":"CN","lead_time_days":45,"status":"ACTIVE"},
+{"supplier_id":"SUP-0010","supplier_name":"Meridian Industries 0010","country_code":"DE","lead_time_days":40,"status":"ACTIVE"},
+{"supplier_id":"SUP-0011","supplier_name":"Blue Brands 0011","country_code":"CN","lead_time_days":28,"status":"ACTIVE"},
+{"supplier_id":"SUP-0012","supplier_name":"Falcon Manufacturing 0012","country_code":"MX","lead_time_days":10,"status":"ACTIVE"},
+{"supplier_id":"SUP-0013","supplier_name":"Keystone Imports 0013","country_code":"US","lead_time_days":35,"status":"ACTIVE"},
+{"supplier_id":"SUP-0014","supplier_name":"Iris Brands 0014","country_code":"DE","lead_time_days":37,"status":"ACTIVE"},
+{"supplier_id":"SUP-0015","supplier_name":"Keystone Trading 0015","country_code":"VN","lead_time_days":34,"status":"ACTIVE"},
+{"supplier_id":"SUP-0016","supplier_name":"Delta Brands 0016","country_code":"MX","lead_time_days":29,"status":"ACTIVE"},
+{"supplier_id":"SUP-0017","supplier_name":"Horizon Manufacturing 0017","country_code":"VN","lead_time_days":28,"status":"ACTIVE"},
+{"supplier_id":"SUP-0018","supplier_name":"Nova Trading 0018","country_code":"DE","lead_time_days":14,"status":"ACTIVE"},
+{"supplier_id":"SUP-0019","supplier_name":"Lumen Trading 0019","country_code":"US","lead_time_days":17,"status":"ACTIVE"},
+{"supplier_id":"SUP-0020","supplier_name":"Nova Supply 0020","country_code":"DE","lead_time_days":38,"status":"ACTIVE"}
+]

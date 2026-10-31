@@ -1,0 +1,6 @@
+# Keep files byte-identical to what the generator wrote: dataset checksums (manifest.json) and the
+# reproducibility reports compare exact bytes, so no line-ending conversion on any platform.
+* text=auto eol=lf
+data/** -text
+reports/** -text
+*.bat text eol=crlf
