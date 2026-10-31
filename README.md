@@ -1,5 +1,7 @@
 # Inventryx: warehouse slotting with synthetic data, an optimizer and evaluation
 
+**Live Demo:** https://inventryx-ten.vercel.app/
+
 This project places SKUs into warehouse locations using demand velocity, dimensions, hazard and temperature
 compatibility, and pick and replenishment constraints. It is one reproducible pipeline:
 
