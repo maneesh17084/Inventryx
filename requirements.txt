@@ -1,0 +1,2 @@
+# Inventryx has no runtime dependencies (Python standard library only).
+# This file exists so hosting platforms (e.g. Vercel) detect a Python project.

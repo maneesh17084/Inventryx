@@ -367,7 +367,7 @@ async function proposalsPage(_, q) {
         ["Period", `${esc(r.effective_from)} → ${r.effective_to ? esc(r.effective_to) : "open-ended"}`],
         ["Units that fit", `${num(r.units_capacity)}${r.reorder_point !== null ? ` (reorder at ${r.reorder_point})` : ""}`], ["Travel cost", `${r.travel_seconds} s per line`],
         ["Current slot", r.current_slot ? `${locLink(r.current_slot.location_id, r.current_slot.warehouse_id, "OPT")}` : "none"]])}
-      ${r.recorded ? `<p class="note">Recorded as <b>${esc(r.recorded.slot_id)}</b> by ${esc(r.recorded.requested_by)} in the durable proposal log${ok ? ". It now occupies this location in every later check, including after a server restart, until it is withdrawn." : "."}</p>` : ""}
+      ${r.recorded ? `<p class="note">Recorded as <b>${esc(r.recorded.slot_id)}</b> by ${esc(r.recorded.requested_by)} ${r.durable === false ? " (demo hosting: kept only while this server instance is alive)" : " in the durable proposal log"}${ok ? `. It now occupies this location in later checks${r.durable === false ? "" : ", including after a server restart,"} until it is withdrawn.` : "."}</p>` : ""}
       <h3 style="margin-top:14px">Best valid alternatives</h3>${table(["Location", "Zone", "#Capacity", "#Cost s/day", ""], r.alternatives.map((a) => `<tr><td class="mono">${a.location_id}</td><td>${esc(a.zone)}${a.golden ? " · golden" : ""}</td>
         <td class="num">${a.units_capacity}</td><td class="num">${num(a.total_cost, 1)}</td><td><button data-use="${a.location_id}">Use</button></td></tr>`), "No free valid location")}`;
     f("result").querySelectorAll("[data-use]").forEach((b) => (b.onclick = () => { f("p-loc").value = b.dataset.use; check(); }));
@@ -381,6 +381,7 @@ async function proposalsPage(_, q) {
   const loadLog = async () => {
     const d = await api("/api/proposals");
     f("log-meta").textContent = `${d.proposals.length} proposals · ${d.events} events · append-only log ${d.log_path}`;
+    if (!d.durable) f("log-meta").innerHTML = `<span class="badge warn">Demo hosting</span> Proposals here are kept only while this server instance is alive and may disappear at any time. Run Inventryx locally (python run.py) for the durable, append-only log.`;
     f("log").innerHTML = (d.skipped.length ? `<p class="err small">${d.skipped.length} unreadable log line(s) were skipped: ${esc(d.skipped.join("; "))}</p>` : "") +
       table(["ID", "Planner", "Warehouse", "SKU", "Location", "Effective", "Status", "Reasons", ""], d.proposals.map((p) => `<tr class="click" data-hist="${p.slot_id}">
       <td class="mono">${p.slot_id}</td><td>${esc(p.requested_by)}</td><td>${p.warehouse_id}</td><td>${skuLink(p.sku_id)}</td><td>${locLink(p.location_id, p.warehouse_id, "OPT")}</td>

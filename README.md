@@ -59,6 +59,26 @@ window open**; closing it stops the app.
 | `port 8000 is unavailable` | Another program holds the port; use `run.py`, or pass `--port 8001` |
 | `needs Python 3.10 or newer` | Install a current Python from python.org |
 
+## Deploy on Vercel
+
+The repository deploys to Vercel as-is: import it in Vercel, or push to a connected repo, with no build settings
+to change.
+
+* `api/index.py` serves the whole app (pages, static files and the JSON API) as one Python function. It reuses
+  the same request handler as the local server.
+* `vercel.json` rewrites every URL to that function, bundles `inventryx/`, `data/starter/` and `reports/`, and
+  serves nothing else statically.
+
+Differences from running locally:
+
+| | Local (`python run.py`) | Vercel |
+|---|---|---|
+| Dataset | `data/full` (generated on first run) or `data/starter` | `data/starter` (bundled; the filesystem is read-only, so the full dataset can't be generated there) |
+| Proposal log | Durable, append-only, survives restarts | Kept in the instance's temp folder, so lost when the instance is recycled. The register shows a "Demo hosting" notice |
+| First request | About a minute on a fresh `data/full` | A cold start of about 1–2 s while the starter data loads |
+
+A `404 NOT_FOUND` page from Vercel means the deployment predates these files. Redeploy the latest commit.
+
 ## Web app: Inventryx
 
 `python -m inventryx serve` defaults to `--data data/full --port 8000 --host 127.0.0.1`. If the `--data` folder has
@@ -133,7 +153,7 @@ python -m inventryx reproduce --profile full --seed 20261022                    
 python -m inventryx docs                                                             # regenerate data dictionary and ERD
 python -m inventryx serve --data data/full --port 8000                               # web app at http://127.0.0.1:8000
 python -m inventryx package                                                        # clean delivery zip (see below)
-python -m pytest -q                                                                 # 46 tests
+python -m pytest -q                                                                 # 86 tests
 ```
 
 `generate` replaces whatever is in `--out` (default `data/<profile>`), so always pass `--out` when trying another
@@ -185,6 +205,8 @@ inventryx/
 run.py            launcher: works from any folder / VS Code Run; picks a free port; opens the browser
 Inventryx.bat     Windows double-click launcher (wraps run.py)
 .vscode/          launch configurations: start app (full / starter), generate, run tests
+api/index.py      Vercel entry point (serverless function serving the whole app)
+vercel.json       Vercel routing and function bundle configuration
 docs/             data_dictionary.md, erd.md, business_rules.md, provenance.md
 tests/            rule unit tests, end-to-end tests, mutation tests
 data/<profile>/   csv/ json/ sql/ schema/ ground_truth/ reports/ manifest.json

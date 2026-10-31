@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "",
+  "outputDirectory": "public",
+  "functions": {
+    "api/index.py": {
+      "includeFiles": "{inventryx/**,data/starter/**,reports/**}",
+      "excludeFiles": "{tests/**,data/full/**,**/__pycache__/**,**/*.pyc}",
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index?__path=/$1" }
+  ]
+}

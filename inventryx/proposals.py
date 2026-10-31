@@ -41,6 +41,7 @@ class ProposalLog:
         self.events = []
         self.skipped = []             # unreadable / invalid lines, reported not fatal
         self.next_no = first_slot_no
+        self.durable = True
         self.path.parent.mkdir(parents=True, exist_ok=True)
         if self.path.exists():
             self._replay(log)
@@ -134,6 +135,7 @@ class ProposalLog:
 
     def listing(self):
         return dict(log_path=str(self.path), dataset=self.fp, events=len(self.events), skipped=self.skipped,
+                    durable=self.durable,
                     proposals=sorted(self.proposals.values(), key=lambda p: p["slot_id"], reverse=True))
 
     def history(self, slot_id):

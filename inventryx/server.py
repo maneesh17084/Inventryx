@@ -30,6 +30,11 @@ from .rules import (capacity_issue, compat_key, fit_units, incompatible_pairs, l
 
 WEB = Path(__file__).resolve().parent / "web"
 COMMITTED = ("ACTIVE", "SUPERSEDED", "APPROVED")
+# Fixed types for everything the app serves; mimetypes alone depends on the OS registry
+# (e.g. Windows maps .csv to Excel), which would make responses differ between hosts.
+CONTENT_TYPES = {".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".json": "application/json",
+                 ".csv": "text/csv", ".md": "text/markdown", ".sql": "application/sql", ".txt": "text/plain",
+                 ".svg": "image/svg+xml", ".png": "image/png"}
 
 
 def _json_default(v):
@@ -43,7 +48,7 @@ def _json_default(v):
 class Store:
     """In-memory indexes over one dataset directory."""
 
-    def __init__(self, path: Path, log=print, state_dir: Path | None = None):
+    def __init__(self, path: Path, log=print, state_dir: Path | None = None, ephemeral_state=False):
         self.path = Path(path)
         log(f"[serve] loading {self.path} ...")
         t, errors = load_tables(self.path)
@@ -63,6 +68,7 @@ class Store:
         state = Path(state_dir) if state_dir else self.path.parent / "runtime"
         last_slot = max(int(s["slot_id"][-6:]) for s in t["slot_assignment"])
         self.proposals = ProposalLog(state / f"proposals-{fp}.jsonl", fp, last_slot + 1, log=log)
+        self.proposals.durable = not ephemeral_state   # False on serverless hosts (/tmp is per instance)
         log(f"[serve] {len(t['order_line']):,} order lines, {len(t['location']):,} locations ready")
 
     def _index(self):
@@ -308,6 +314,7 @@ class Store:
             except ValueError as e:
                 return dict(error=str(e))
             result["recorded"] = rec
+            result["durable"] = self.proposals.durable
             return result
 
     def withdraw_proposal(self, slot_id, body):
@@ -547,8 +554,9 @@ def make_handler(store: Store):
             target = (base / rel).resolve()
             if base.resolve() not in target.parents or not target.is_file():
                 return self._send(404, {"error": "not found"})
-            ctype = mimetypes.guess_type(target.name)[0] or "application/octet-stream"
-            if ctype.startswith("text/") or ctype in ("application/json", "application/javascript"):
+            ctype = (CONTENT_TYPES.get(target.suffix.lower()) or mimetypes.guess_type(target.name)[0]
+                     or "application/octet-stream")
+            if ctype.startswith("text/") or ctype in ("application/json", "application/javascript", "application/sql"):
                 ctype += "; charset=utf-8"
             self._send(200, target.read_bytes(), ctype)
 
